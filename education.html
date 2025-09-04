@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+     body {
+      background-color:#f5f7fa;
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      color: #333;
+    }
+    nav {
+      padding: 15px;
+      text-align: right;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 20px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    
+    section {
+        max-width: 900px;
+      margin: 50px auto;
+      padding: 10px 10%;
+    }
+    section h2 {
+      color: #2575fc;
+      margin-bottom: 25px;
+      font-size: 2em;
+      border-left: 6px solid #6a11cb;
+      padding-left: 12px;
+    }
+    .edu-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0px 6px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 10px 22px rgba(0,0,0,0.15);
+    }
+
+    .edu-card strong {
+      font-size: 1.2em;
+      color: #6a11cb;
+    }
+
+    .edu-card p {
+      margin: 6px 0;
+      font-size: 0.95em;
+      color: #444;
+    }
+
+  
+    .edu-card::before {
+      content: "🎓";
+      position: absolute;
+      left: -40px;
+      top: 20px;
+      font-size: 22px;
+      color: #2575fc;
+    }
+
+    
+</style>
+
+
+
+<body>
+     <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="project.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="skills.html">Skills</a>
+  </nav>
+
+<section>
+    <h2>Education</h2>
+
+    <div class="edu-card">
+      <strong>VEMU Institute of Technology</strong> — B.Tech in Electrical & Electronics Engineering  
+      <p>Oct 2021 - Dec 2024 | CGPA: 75%</p>
+    </div>
+
+    <div class="edu-card">
+      <strong>Kakatiya Junior College</strong> — Intermediate (MPC)  
+      <p>2017 - 2019 | GPA: 78%</p>
+    </div>
+
+    <div class="edu-card">
+      <strong>Narayana EM School</strong> — SSC  
+      <p>2015 - 2017 | GPA: 85%</p>
+    </div>
+</section>
+
+    
+</body>
+</html>
