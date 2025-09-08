@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abhishek Portfolio</title>
   <style>
-  
-
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       color: #fff;
-      background: linear-gradient(135deg, #56c5e7, #3a7bd5);
+      background: url("assets/images/desk-2325627_1280.jpg") no-repeat center center fixed;
+      background-size: cover;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -22,7 +21,7 @@
       padding: 20px 60px;
       text-align: right;
       position: fixed;
-      width: 100%;
+      width: 95%;
       top: 0;
       left: 0;
       background: rgba(0, 0, 0, 0.3);
@@ -35,40 +34,72 @@
       text-decoration: none;
       font-weight: 600;
       margin: 0 20px;
+      position: relative;
       transition: color 0.3s ease;
+    }
+
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #ffb347;
+      transition: width 0.3s ease-in-out;
     }
 
     nav a:hover {
       color: #ffb347;
     }
 
+    nav a:hover::after {
+      width: 100%;
+    }
 
+   
+    nav a.active {
+      color: #ffb347;
+    }
+    nav a.active::after {
+      width: 100%;
+    }
+
+  
     .hero {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
-      padding: 120px 80px;
+      align-items: flex-end;
+      padding: 120px 350px;
       animation: fadeIn 1.2s ease-in-out;
+      text-align: justify;
     }
 
     .hero h1 {
       font-size: 60px;
       font-weight: 700;
       margin: 10px 0;
+      animation: slideIn 1.5s ease forwards;
+      color: #ffb347;
     }
 
     .hero p {
       font-size: 22px;
       margin-bottom: 30px;
       opacity: 0.9;
+      animation: fadeInUp 1.5s ease forwards;
+      color: black;
+
     }
 
-
+  
     .buttons {
       display: flex;
       gap: 25px;
+      animation: fadeInUp 2s ease forwards;
     }
 
     .buttons a {
@@ -77,8 +108,8 @@
 
     .buttons button {
       background: transparent;
-      border: 2px solid white;
-      color: white;
+      border: 1px solid black;
+      color: black;
       padding: 12px 30px;
       font-size: 16px;
       font-weight: 600;
@@ -89,31 +120,46 @@
 
     .buttons button:hover {
       background: white;
-      color: #3a7bd5;
+      color: #ffb347;
       transform: scale(1.05);
       box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+       border: 1px solid white;
     }
 
-
+   
     footer {
       background: #111;
       color: #ddd;
       text-align: center;
-      padding: 15px;
+      padding: 8px;
       font-size: 14px;
       letter-spacing: 1px;
     }
 
+  
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
+  
+
   <nav>
-    <a href="home.html">Home</a>
+    
+    <a href="home.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="education.html">Education</a>
     <a href="project.html">Projects</a>
@@ -123,7 +169,7 @@
 
   <div class="hero">
     <p>Hello, I'm</p>
-    <h1>Abhishek Mulinti</h1>
+    <h1>Abhishek</h1>
     <p>🚀 Full Stack Developer</p>
     <div class="buttons">
       <a href="index.html"><button>Hire Me</button></a>

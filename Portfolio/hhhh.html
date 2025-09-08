@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Mulinti - Portfolio</title>
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url("assets/images/desk-2325627_1280.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      scroll-behavior: smooth;
+    }
+  #about div {
+  background: rgba(255, 255, 255, 0.08); 
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatCard 6s ease-in-out infinite; 
+}
+
+#about div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+}
+
+
+
+
+    h1, h2, h3 {
+      color: #ffb347;
+      margin-bottom: 12px;
+      
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+  
+    nav {
+      padding: 20px 60px;
+      text-align: right;
+      position: fixed;
+      width: 95%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(2px);
+      z-index: 1000;
+
+    
+ 
+    }
+    
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 15px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #ffb347;
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #ffb347;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(0,0,0,0.65);
+      border-radius: 16px;
+      box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+      text-align: center;
+      scroll-margin-top: 100px;
+      animation: fadeUp 1s ease;
+       transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px;
+      flex: 1;
+      min-width: 260px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+       animation: float 6s ease-in-out infinite;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .skills span, .interests span {
+      display: inline-block;
+      background: #ffb347;
+      color: #111;
+      padding: 10px 18px;
+      margin: 8px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+       animation: floatSmall 4s ease-in-out infinite;
+    }
+    .skills span:hover, .interests span:hover {
+      transform: scale(1.1);
+      background: #fff;
+      color: #111;
+      cursor: pointer;
+    }
+
+    
+    footer {
+      text-align: center;
+      background: #111;
+      color: #ddd;
+      padding: 10px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+.contact-container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
+  animation: floatContact 3s ease-in-out infinite, fadeInUp 1s ease forwards;
+  position: relative;
+}
+.contact-container h2 {
+  color: #ffb347;
+  margin-bottom: 15px;
+  border-left: 6px solid #fff;
+  padding-left: 10px;
+}
+.contact-container p {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.contact-form label {
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #ffb347;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255,255,255,0.9);
+  color: #111;
+}
+.contact-form button {
+  background: #ffb347;
+  color: #111;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+   transition: all 0.3s ease, transform 0.5s ease;
+   
+}
+.contact-form button:hover {
+  background: #fff;
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+}
+
+.contact-info a {
+  color: #ffb347;
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+.education-item h3::before {
+  content: "🎓";
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ffb347;
+}
+.project-item h3::before {
+  content: "💻";
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ffb347;
+}
+.experience-item h3::before {
+  content: "💼";
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ffb347;
+}
+.about-item h2::before {
+  content: "👨‍💻";
+  margin-right: 10px;
+  font-size: 22px;
+  color: #ffb347;
+}
+.skills-heading::before {
+  content: "🛠️";
+  margin-right: 10px;
+  font-size: 22px;
+  color: #ffb347;
+}
+.interests-heading::before {
+  content: "✨";
+  margin-right: 10px;
+  font-size: 22px;
+  color: #ffb347;
+}
+
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes floatSmall {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+@keyframes floatContact {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+  </style>
+</head>
+<body>  
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="home">
+    <h1>Abhishek Mulinti</h1>
+    <p>🚀 Full Stack Developer</p>
+  </section>
+
+  <section id="about" class="about-item">
+
+  <h2>About Me</h2>
+  <div>
+  <p> 
+    My name is <strong>Abhishek Mulinti</strong>, and I was born and raised in 
+    <strong>Kurnool, Andhra Pradesh</strong>. Growing up in a city known for its 
+    history and resilience, I developed a mindset of perseverance and adaptability, 
+    qualities that now reflect in my work as a developer.
+  </p>
+  <p>
+    I hold a degree in <strong>Electrical & Electronics Engineering</strong>, 
+    but my passion for <strong>technology and problem-solving</strong> led me to 
+    explore the world of software development. Over time, I honed my skills in 
+    <em>Core Java, Spring Boot, SQL, and Web Development</em>, and started creating 
+    projects that combine both creativity and technical depth.
+  </p>
+  <p>
+    I enjoy designing <strong>scalable applications</strong>, learning new 
+    technologies, and pushing myself with challenging projects. My goal is to 
+    continuously improve and contribute to meaningful solutions in the IT field.
+  </p>
+  </div>
+</section>  
+<section id="education">
+  <h2>Education</h2>
+  <div class="grid">
+    <div class="card education-item">
+      <h3>VEMU Institute of Technology</h3>
+      <p>B.Tech in EEE (2021 - 2024)</p>
+      <p><strong>CGPA:</strong> 75%</p>
+    </div>
+    <div class="card education-item">
+      <h3>Kakatiya Junior College</h3>
+      <p>Intermediate (MPC, 2017 - 2019)</p>
+      <p><strong>GPA:</strong> 78%</p>
+    </div>
+    <div class="card education-item">
+      <h3>Narayana EM School</h3>
+      <p>SSC (2015 - 2017)</p>
+      <p><strong>GPA:</strong> 85%</p>
+    </div>
+  </div>
+</section>  
+  <section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card project-item">
+      <h3>Three Port Converter & B4 Inverter for BLDC Motor</h3>
+      <p><strong>Objective:</strong> Designed and validated a TPC and B4 inverter for BLDC motor drive to enhance efficiency.</p>
+      <p><strong>Tools:</strong> MATLAB/Simulink, Hardware Prototyping</p>
+      <p><strong>Result:</strong> Achieved 80.95% efficiency.</p>
+    </div>
+    <div class="card project-item">
+      <h3>Foodie Express — Food Delivery Web App</h3>
+      <p><strong>Tech:</strong> JSP, Servlets, MySQL, HTML, CSS</p>
+      <ul style="text-align:left">
+        <li>Implemented secure authentication, cart, and order history</li>
+        <li>Enabled dynamic restaurant menu browsing</li>
+        <li>Designed responsive UI</li>
+        <li><em>Next Phase:</em> Payment gateway integration, live order tracking</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="experience">
+  <h2>Work Experience</h2>
+  <div class="card experience-item">
+    <h3>Full Stack Development Internship</h3>
+    <p><strong>Duration:</strong> 240 hours</p>
+    <ul style="text-align:left">
+      <li>Java, JSP, Servlets, MySQL development</li>
+      <li>Responsive UI with HTML, CSS, JS</li>
+      <li>Integrated REST APIs</li>
+      <li>Authentication & CRUD</li>
+      <li>Deployed to cloud</li>
+    </ul>
+  </div>
+</section>
+  <section id="skills" class="skills-item">
+  <h2 class="skills-heading">Skills</h2>
+  <div class="skills">
+    <span>Java</span>
+    <span>Spring Boot</span>
+    <span>SQL</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+  </div>
+  <h2 class="interests-heading">Interests</h2>
+  <div class="interests">
+    <span>🏏 Cricket</span>
+    <span>🎶 Music</span>
+    <span>📖 Reading</span>
+    <span>💻 Web Designing</span>
+  </div>
+</section>
+  <section id="contact">
+  <div class="contact-container">
+    <h2>📩 Contact Me</h2>
+    <p>Let’s connect! Fill the form below or reach out through my email/phone.</p>
+    <form action="https://formspree.io/f/abhi12345" method="POST" class="contact-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p>📧 Email: <a href="mailto:abhishek.m@envisionis.in">abhishek.m@envisionis.in</a></p>
+      <p>📞 Phone: +91-9010611312</p>
+      <p>🌐 LinkedIn: <a href="https://linkedin.com/in/abhi-shek-5918942b6" target="_blank">linkedin.com/in/abhi-shek-5918942b6</a></p>
+      <p>💻 GitHub: <a href="https://github.com/abhishek" target="_blank">github.com/abhishek</a></p>
+    </div>
+  </div>
+</section>
+  <footer>
+    <p>© 2025 Abhishek Mulinti | Portfolio ❤️</p>
+  </footer>
+
+   <!-- <script>
+  const btn = document.getElementById("toggle-theme");
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  }); -->
+<!-- </script> 
+
+ <script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script> -->
+
+
+</body>
+</html>
+ 

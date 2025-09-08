@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Abhishek Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url("assets/images/profolio.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+ 
+    nav {
+      padding: 20px 60px;
+      text-align: start;
+      position: fixed;
+      width: 95%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+      animation: fadeDown 1s ease-in-out;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 20px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #ffb347;
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #ffb347;
+    }
+    /* nav a:hover::after {
+      width: 100%;
+    }
+    nav a.active {
+      color: #ffb347;
+    }
+    nav a.active::after {
+      width: 100%;
+    } */
+
+  
+    main {
+      flex: 1;
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .contact-container {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .contact-container h2 {
+      color: #ffb347;
+      margin-bottom: 15px;
+      border-left: 6px solid #fff;
+      padding-left: 10px;
+    }
+
+    .contact-container p {
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      margin: 10px 0 5px;
+      font-weight: 600;
+      color: #ffb347;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      outline: none;
+      background: rgba(255,255,255,0.9);
+      color: #111;
+    }
+
+    .contact-form button {
+      background: #ffb347;
+      color: #111;
+      font-weight: 600;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #fff;
+      color: #111;
+      transform: scale(1.05);
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+
+    .contact-info a {
+      color: #ffb347;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+  
+    footer {
+      text-align: center;
+      background: #111;
+      color: #ddd;
+      padding: 20px;
+      font-size: 14px;
+      animation: fadeUp 1s ease-in-out;
+    }
+
+ 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="home.html">⬅ Back</a>
+    <!-- <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="skills.html">Skills</a> -->
+   
+  </nav>
+
+  <main>
+    <div class="contact-container">
+      <h2>📩 Contact Me</h2>
+      <p>Let’s connect! Fill the form below or reach out through my email/phone.</p>
+
+      <form action="https://formspree.io/f/abhi12345" method="POST" class="contact-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <p>📧 Email: <a href="mailto:abhishek.m@envisionis.in">abhishek.m@envisionis.in</a></p>
+        <p>📞 Phone: +91-9010611312</p>
+        <p>🌐 LinkedIn: <a href="https://linkedin.com/in/abhi-shek-5918942b6" target="_blank">linkedin.com/in/abhi-shek-5918942b6</a></p>
+        <p>💻 GitHub: <a href="https://github.com/abhishek" target="_blank">github.com/abhishek</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Abhishek Mulinti | Portfolio ❤️</p>
+  </footer>
+
+</body>
+</html>

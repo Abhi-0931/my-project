@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education - Abhishek Mulinti</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url("assets/images/desk-2325627_1280.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+ 
+    nav {
+      padding: 20px 60px;
+      text-align: right;
+      position: fixed;
+      width: 95%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+      animation: fadeDown 1s ease-in-out;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 20px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #ffb347;
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #ffb347;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a.active {
+      color: #ffb347;
+    }
+
+    nav a.active::after {
+      width: 100%;
+    }
+
+
+    header {
+      margin-top: 100px;
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      font-weight: 700;
+       color: #ffb347;
+    }
+
+    header p {
+      margin: 10px 0;
+      font-size: 18px;
+      opacity: 0.9;
+       color: #ffb347;
+    }
+
+ 
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 25px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    section h2 {
+      color: #ffb347;
+      margin-bottom: 15px;
+      border-left: 6px solid #fff;
+      padding-left: 10px;
+    }
+
+    .edu-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0px 6px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      padding-left: 40px;
+       
+    }
+
+    .edu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 10px 22px rgba(0,0,0,0.4);
+      
+    }
+
+    .edu-card strong {
+      font-size: 1.2em;
+      color: #ffb347;
+      
+    }
+
+    .edu-card p {
+      margin: 6px 0;
+      font-size: 0.95em;
+      color: #ddd;
+      
+    }
+
+    .edu-card::before {
+      content: "🎓";
+      position: absolute;
+      left: 1px;
+      top: 20px;
+      font-size: 22px;
+      color: #ffb347;
+    }
+
+
+    footer {
+      text-align: center;
+      background: #111;
+      color: #ddd;
+      padding: 8px;
+      font-size: 14px;
+      margin-top: 40px;
+      animation: fadeUp 1s ease-in-out;
+    }
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="project.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="skills.html">Skills</a>
+  </nav>
+
+  <header>
+    <h1>My Education</h1>
+    <p>Academic Background & Achievements</p>
+  </header>
+
+  <section>
+    <h2>Education</h2>
+
+    <div class="edu-card">
+      <strong>VEMU Institute of Technology</strong> — B.Tech in Electrical & Electronics Engineering  
+      <p>Oct 2021 - Dec 2024 | CGPA: 75%</p>
+    </div>
+
+    <div class="edu-card">
+      <strong>Kakatiya Junior College</strong> — Intermediate (MPC)  
+      <p>2017 - 2019 | GPA: 78%</p>
+    </div>
+
+    <div class="edu-card">
+      <strong>Narayana EM School</strong> — SSC  
+      <p>2015 - 2017 | GPA: 85%</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Abhishek Mulinti | Portfolio ❤️</p>
+  </footer>
+
+</body>
+</html>
