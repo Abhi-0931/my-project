@@ -510,6 +510,8 @@
     <footer>
       <p>© 2025 Abhishek Mulinti | Portfolio ❤️</p>
     </footer>
+
+  
     
     <script>
   const topBtn = document.createElement("button");
@@ -535,6 +537,15 @@
   topBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  let courses = [
+  { id: 1, name: "JS" },
+  { id: 2, name: "Java" }
+];
+
+let found = courses.find(c => c.name === "Java");
+console.log(found);
+
 </script>
 
 
