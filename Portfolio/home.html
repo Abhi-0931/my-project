@@ -151,6 +151,19 @@
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    .typing {
+      border-right: 2px solid black;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(20, end), blink .8s infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
   </style>
 </head>
 <body>
@@ -171,6 +184,7 @@
     <p>Hello, I'm</p>
     <h1>Abhishek</h1>
     <p>🚀 Full Stack Developer</p>
+    
     <div class="buttons">
       <a href="index.html"><button>Hire Me</button></a>
       <a href="contact.html"><button>Contact Me</button></a>
@@ -180,6 +194,35 @@
   <footer>
     <p>© 2025 Abhishek Mulinti | Portfolio ❤️</p>
   </footer>
+
+
+  <script>
+
+  const navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+
+ 
+  const typingText = document.getElementById("typing");
+  const words = ["🚀 Full Stack Developer"];
+  let wordIndex = 0;
+
+  function typeEffect() {
+    typingText.classList.remove("typing");
+    void typingText.offsetWidth; 
+    typingText.textContent = words[wordIndex];
+    typingText.classList.add("typing");
+    wordIndex = (wordIndex + 1) % words.length;
+  }
+
+  typeEffect(); 
+  setInterval(typeEffect, 4000); 
+</script>
+
 
 </body>
 </html>

@@ -231,6 +231,38 @@
   <footer>
     <p>© 2025 Abhishek Mulinti | Portfolio ❤️</p>
   </footer>
+  <script>
+  // Navbar active link highlight
+  const navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+
+  // Fade-in effect when scrolling
+  const sections = document.querySelectorAll("section");
+  const revealOnScroll = () => {
+    sections.forEach(sec => {
+      const secTop = sec.getBoundingClientRect().top;
+      if (secTop < window.innerHeight - 100) {
+        sec.style.opacity = "1";
+        sec.style.transform = "translateY(0)";
+      }
+    });
+  };
+
+  sections.forEach(sec => {
+    sec.style.opacity = "0";
+    sec.style.transform = "translateY(40px)";
+    sec.style.transition = "all 0.8s ease-out";
+  });
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // run on load
+</script>
+
 
 </body>
 </html>
